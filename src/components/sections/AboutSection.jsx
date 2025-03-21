@@ -6,9 +6,7 @@ function AboutSection() {
     <section className="mb-10">
       <SectionHeader title="About" />
       <p className="mb-5 text-sm leading-6 text-black text-opacity-70">
-        I am Alex Morgan, a passionate Web Designer &amp; Developer residing in
-        the dynamic city of Berlin, Germany. My expertise lies at the
-        intersection of visual design and technical implementation.
+      Hey, I’m Pritam—a video editor with 3+ years of experience, helping content creators and businesses stand out with high-quality, engaging videos.
       </p>
       <p className="text-sm leading-6 text-black text-opacity-70">
         With over 5 years of experience in creating visually stunning and
