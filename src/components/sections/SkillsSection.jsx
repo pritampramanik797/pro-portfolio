@@ -4,12 +4,11 @@ import SkillTag from "../ui/SkillTag";
 
 function SkillsSection() {
   const skills = [
-    "Web Design",
-    "UI/UX Design",
-    "Front-end development",
-    "Web Animations",
-    "Copywriting",
-    "Marketing",
+    "Talking-head Videos",
+    "Business Case Study Videos",
+    "Podcast",
+    "Podcast Intro",
+    "Ad Video",
   ];
 
   return (

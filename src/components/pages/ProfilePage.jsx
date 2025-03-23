@@ -35,6 +35,7 @@ import ProfileContent from "./ProfileContent";
 
 function ProfilePage() {
   const scrollToContact = useRef(null);  // Create the ref
+  const projectsRef = useRef(null);
 
   return (
     <main className="flex justify-center p-8 bg-neutral-100 min-h-screen">
@@ -43,16 +44,16 @@ function ProfilePage() {
           
           {/* Sidebar */}
           <div className="hidden sm:block sm:sticky sm:top-[30px] h-screen w-1/4">
-            <ProfileSidebar scrollToContact={scrollToContact} />
+            <ProfileSidebar scrollToContact={scrollToContact} scrollToProjects={projectsRef}/>
           </div>
 
-          <div className="sm:hidden block">
-            <ProfileSidebar scrollToContact={scrollToContact} />
+          <div className="sm:hidden block ">
+            <ProfileSidebar scrollToContact={scrollToContact} scrollToProjects={projectsRef}/>
           </div>
 
           {/* Main Content */}
           <div className="sm:max-w-[40%] sm:ml-[-40px]">
-            <ProfileContent scrollToContact={scrollToContact} />
+            <ProfileContent scrollToContact={scrollToContact} scrollToProjects={projectsRef}/>
           </div>
 
         </section>

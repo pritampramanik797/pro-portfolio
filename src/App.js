@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import AvailabilityBadge from './components/pages/AvailabilityBadge';
 import ContactInfo from './components/pages/ContactInfo';

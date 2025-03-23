@@ -1,10 +1,11 @@
 import React from "react";
 
-function LinkItem({ text, fullWidth = false }) {
+function LinkItem({ text, fullWidth = false,link }) {
   return (
     <a
-      href="#"
-      className={`flex justify-between items-center p-3.5 bg-white rounded-lg ${fullWidth ? "col-span-2 max-sm:col-span-1" : ""}`}
+      href={link}
+      target="_blank"
+      className={`flex justify-between w-full items-center p-3.5 bg-white rounded-lg ${fullWidth ? "col-span-2 max-sm:col-span-1" : ""}`}
     >
       <span className="text-sm text-black text-opacity-80">{text}</span>
       <ExternalLinkIcon />

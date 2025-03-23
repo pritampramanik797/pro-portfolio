@@ -33,18 +33,24 @@ import ProjectsSection from "../sections/ProjectsSection";
 import LinksSection from "../sections/LinksSection";
 import ContactSection from "../sections/ContactSection";
 
-function ProfileContent({ scrollToContact }) {
+function ProfileContent({ scrollToContact,scrollToProjects }) {
   useEffect(() => {
     if (scrollToContact) {
       scrollToContact.current = document.getElementById("contact-section");
     }
   }, [scrollToContact]);
+  useEffect(() => {
+    if (scrollToProjects) {
+      scrollToProjects.current = document.getElementById("project-section");
+    }
+  }, [scrollToProjects]);
 
   return (
     <article className="flex-1">
       <AboutSection />
       <SkillsSection />
-      <ProjectsSection />
+      <div id="project-section"><ProjectsSection /></div>
+      
       <LinksSection />
 
       {/* Contact Section with ID */}

@@ -1,32 +1,71 @@
+
+
+
 // import React from "react";
 // import AvailabilityBadge from "./AvailabilityBadge";
 // import ContactInfo from "./ContactInfo";
+// import mainImg from '../../video/mainImg.png'
 
-// function ProfileSidebar({ scrollToContact }) {
+// function ProfileSidebar({ scrollToContact ,scrollToProjects}) {
 //   return (
-//     <aside className="w-56 max-md:w-full ">
+//     <aside className="w-52 max-md:w-full">
 //       <div className="p-2.5 bg-white rounded-lg shadow-sm">
-//         <div className="flex flex-col items-center ">
-//           <img
-//             src="https://cdn.builder.io/api/v1/image/assets/TEMP/13e816d329f777a3186f69989aa206a96733023a"
-//             alt="Profile"
-//             className="w-full max-w-[180px] h-[194px] rounded-[8px] mb-[20px]"
-//           />
-//           <h1 className="mb-2.5 text-2xl font-medium">Hello I'm Alex Morgan</h1>
-//           <p className="mb-2.5 text-sm text-black text-opacity-70">
-//             Web Designer, Content Creator &amp; writer.
-//           </p>
-//           <div className="w-full">
+
+//         {/* Wrapper for small screen layout */}
+//         <div className="flex flex-col max-md:flex-row max-md:items-center max-md:gap-4">
+          
+//           {/* Image */}
+//           <div className="max-w-[180px] mb-[20px] rounded-lg overflow-hidden max-md:mb-0">
+//             <img
+//               src={mainImg}
+//               alt="Profile"
+//               className="w-full h-full object-contain"
+//             />
+//           </div>
+
+//           {/* Title and Description */}
+//           <div className="flex-1">
+//             <h1
+//               className="mb-2 text-[22px] leading-[26px] font-normal"
+//               style={{
+//                 fontFamily: "'Inter', sans-serif",
+//                 background: "linear-gradient(90deg, #000, #555)",
+//                 WebkitBackgroundClip: "text",
+//                 color: "transparent"
+//               }}
+//             >
+//               Hello I’m <br />
+//               <span
+//                 className="font-semibold"
+//                 style={{
+//                   background: "linear-gradient(90deg, #333, #555)",
+//                   WebkitBackgroundClip: "text",
+//                   color: "transparent"
+//                 }}
+//               >
+//                 Pritam Pramanik
+//               </span>
+//             </h1>
+
+//             <p className="mb-2.5 text-sm text-black text-opacity-70">
+//               Visual storyteller aka <br /> Video Editor.
+//             </p>
+//           </div>
+//         </div>
+
+//         {/* Availability and Location */}
+//         <div className="w-full mt-4">
 //           <AvailabilityBadge />
 //           <div className="flex gap-1 items-center text-xs text-black text-opacity-70">
 //             <LocationIcon />
-//             <span>Berlin, Germany</span>
+//             <span>Kolkata, West Bengal</span>
 //           </div>
-//           </div>
-          
 //         </div>
+
 //       </div>
-//       <ContactInfo scrollToContac={scrollToContact} />
+
+//       {/* Pass ref to ContactInfo */}
+//       <ContactInfo scrollToContact={scrollToContact} scrollToProjects={scrollToProjects}/>
 //     </aside>
 //   );
 // }
@@ -54,36 +93,74 @@
 // }
 
 // export default ProfileSidebar;
+
+
 import React from "react";
 import AvailabilityBadge from "./AvailabilityBadge";
 import ContactInfo from "./ContactInfo";
+import mainImg from '../../video/mainImg.png'
 
-function ProfileSidebar({ scrollToContact }) {
+function ProfileSidebar({ scrollToContact, scrollToProjects }) {
   return (
-    <aside className="w-56 max-md:w-full">
+    <aside className="w-52 max-md:w-full">
       <div className="p-2.5 bg-white rounded-lg shadow-sm">
-        <div className="flex flex-col items-center">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/13e816d329f777a3186f69989aa206a96733023a"
-            alt="Profile"
-            className="w-full max-w-[180px] h-[194px] rounded-[8px] mb-[20px]"
-          />
-          <h1 className="mb-2.5 text-2xl font-medium">Hello I'm Alex Morgan</h1>
-          <p className="mb-2.5 text-sm text-black text-opacity-70">
-            Web Designer, Content Creator &amp; writer.
-          </p>
-          <div className="w-full">
-            <AvailabilityBadge />
-            <div className="flex gap-1 items-center text-xs text-black text-opacity-70">
-              <LocationIcon />
-              <span>Berlin, Germany</span>
-            </div>
+
+        {/* Wrapper for small screen layout */}
+        <div className="flex flex-col max-md:flex-row max-md:items-center max-md:gap-4">
+          
+          {/* Image */}
+          <div className="max-w-[180px] mb-[20px]  rounded-lg overflow-hidden max-md:mb-0 max-md:max-w-[120px]"> 
+            {/* Decreased image size on smaller screens */}
+            <img
+              src={mainImg}
+              alt="Profile"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* Title and Description */}
+          <div className="flex-1">
+            <h1
+              className="mb-2 text-[22px] leading-[26px] font-normal"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                background: "linear-gradient(90deg, #000, #555)",
+                WebkitBackgroundClip: "text",
+                color: "transparent"
+              }}
+            >
+              Hello I’m <br />
+              <span
+                className="font-semibold"
+                style={{
+                  background: "linear-gradient(90deg, #333, #555)",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent"
+                }}
+              >
+                Pritam Pramanik
+              </span>
+            </h1>
+
+            <p className="mb-2.5 text-sm text-black text-opacity-70">
+              Visual storyteller aka <br /> Video Editor.
+            </p>
           </div>
         </div>
+
+        {/* Availability and Location */}
+        <div className="w-full mt-4">
+          <AvailabilityBadge />
+          <div className="flex gap-1 items-center text-xs text-black text-opacity-70">
+            <LocationIcon />
+            <span>Kolkata, West Bengal</span>
+          </div>
+        </div>
+
       </div>
 
       {/* Pass ref to ContactInfo */}
-      <ContactInfo scrollToContact={scrollToContact} />
+      <ContactInfo scrollToContact={scrollToContact} scrollToProjects={scrollToProjects} />
     </aside>
   );
 }
