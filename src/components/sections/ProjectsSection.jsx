@@ -187,7 +187,7 @@ function ProjectsSection() {
             onClick={() => scroll(300)}
             className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-400 text-white p-2 rounded-full shadow-md hover:bg-gray-500 transition"
             aria-label="Scroll Right"
-            style={{ opacity: 0.6, transition: 'opacity 0.3s' }}
+            style={{ opacity: 0.2, transition: 'opacity 0.3s' }}
             onMouseEnter={(e) => e.target.style.opacity = '1'}
             onMouseLeave={(e) => e.target.style.opacity = '0.6'}
           >
